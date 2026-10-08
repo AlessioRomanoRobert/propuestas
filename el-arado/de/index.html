@@ -2,207 +2,303 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Tasca El Arado · Kanarische Tasca · Puerto de la Cruz</title>
-<meta name="description" content="Echte kanarische Küche und familiäre Gastfreundschaft in Puerto de la Cruz.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#17120f">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Tasca El Arado", "telephone": "+34 677 46 70 90", "address": "Lugar Puerto Viejo 22, 38400 Puerto de la Cruz, Tenerife"}</script>
-<style>
-:root{--bg:#17120f;--surface:#221b16;--ink:#f3ebe0;--muted:#b8a894;--accent:#e0a84a;
---accent2:#8c2f2a;--line:rgba(243,235,224,.14);--hero-base:#17120f;--display:'DM Serif Display',Georgia,serif;--body:Manrope,system-ui,sans-serif;
-color-scheme:dark}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font:400 1.0625rem/1.65 var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
+<title>Tasca El Arado · Kanarische Hausmannskost in Puerto de la Cruz</title>
+<meta name="description" content="Kanarische Tasca in der Lugar Puerto Viejo 22, Puerto de la Cruz. Ziegenfleisch, Entrecôte mit Almogrote, Inselkäse und hausgemachter Käsekuchen. 4,4 bei Google aus 955 Bewertungen.">
+<meta name="theme-color" content="#c9ddb2">
+<link rel="alternate" hreflang="es" href="../index.html"><link rel="alternate" hreflang="en" href="../en/index.html"><link rel="alternate" hreflang="de" href="../de/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Tasca El Arado", "servesCuisine": ["Canarian", "Tapas"], "telephone": "+34 677 46 70 90", "priceRange": "€", "image": "img/terraza.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Lugar Puerto Viejo 22", "postalCode": "38400", "addressLocality": "Puerto de la Cruz", "addressRegion": "Santa Cruz de Tenerife", "addressCountry": "ES"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "bestRating": "5", "reviewCount": "955"}, "acceptsReservations": "True"}</script>
+<style>:root{
+  --facade:#c9ddb2;        /* verde pistacho de la fachada */
+  --facade-2:#b4cf98;
+  --slate:#1c2620;         /* pizarra del menú */
+  --slate-2:#26332b;
+  --chalk:#f1efe6;
+  --stone:#ebe7dd;         /* adoquín de Puerto Viejo */
+  --ink:#17201a;
+  --muted:#4b5a4f;
+  --awning:#b3261e;        /* toldo rojo */
+  --awning-d:#8f1c16;
+  --rule:rgba(23,32,26,.18);
+  --display:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gut:16px;
+  --dock:88px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--stone);color:var(--ink);font:400 17px/1.55 var(--sans);overflow-x:hidden;padding-bottom:var(--dock)}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;text-wrap:balance;letter-spacing:-.01em}
-.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
-.eyebrow{font:600 .78rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.muted{color:var(--muted)}
+:focus-visible{outline:3px solid var(--awning);outline-offset:3px;border-radius:2px}
+.mono{font-family:var(--mono);font-size:.78em;letter-spacing:.02em}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;z-index:99}
+.skip:focus{left:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
 
-/* barra superior */
-.top{position:fixed;inset:0 0 auto;z-index:30;padding:calc(14px + env(safe-area-inset-top,0px)) 0 14px;transition:background .3s,backdrop-filter .3s}
-.top.solid{background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;color:#fff}
-.top.solid .brand{color:var(--ink)}
-.top nav{display:flex;align-items:center;gap:18px}
-.langs{display:flex;gap:2px;background:rgba(0,0,0,.25);border-radius:999px;padding:3px}
-.langs a{font:600 .72rem/1 var(--body);letter-spacing:.08em;text-decoration:none;color:#fff;padding:7px 10px;border-radius:999px;opacity:.75}
-.langs a[aria-current]{background:#fff;color:#111;opacity:1}
-.top .cta{font:600 .9rem var(--body);text-decoration:none;background:var(--accent);color:#111;padding:10px 18px;border-radius:999px}
+/* top */
+.top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px var(--gut);max-width:1260px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;font:700 19px/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.mk{width:10px;height:10px;background:var(--awning);border-radius:50%}
+.langs{display:flex;gap:2px;font:500 12px/1 var(--mono)}
+.langs a{text-decoration:none;padding:9px 8px;border-bottom:1.5px solid transparent;letter-spacing:.06em}
+.langs a[aria-current]{border-color:currentColor}
 
-/* portada */
-.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;background:url('../img/el-arado-1.jpg') center/cover;overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.1) 30%,rgba(0,0,0,.78) 100%),linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 80%)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero .ghost{position:absolute;right:-.06em;top:50%;transform:translateY(-62%);font:600 clamp(14rem,42vw,40rem)/.8 var(--display);color:rgba(255,255,255,.07);z-index:-1;pointer-events:none;user-select:none;display:none;}
-.hero .wrap{padding-block:140px 72px;display:grid;gap:22px}
-.hero .eyebrow{color:var(--accent)}
-.hero h1{font-size:clamp(3.2rem,11vw,8.5rem);max-width:12ch}
-.hero .lema{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:40ch;opacity:.92}
-.hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:6px}
-.btn{display:inline-flex;align-items:center;gap:10px;font:600 1rem var(--body);text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.main{background:var(--accent);color:#111}
-.btn.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px)}
-.btn svg{width:18px;height:18px;fill:currentColor}
-.rating{display:flex;align-items:baseline;gap:8px}
-.rating b{font:600 1.6rem/1 var(--display)} .rating span{color:#ffc94d;letter-spacing:2px} .rating small{opacity:.8}
-.estado{display:inline-flex;align-items:center;gap:8px;font:600 .85rem var(--body);padding:7px 14px;border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(6px)}
-.estado::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
-.estado.si{color:#7ee2a0} .estado.no{color:#ff9d8a}
+/* hero */
+.hero{background:var(--facade);position:relative;padding:72px var(--gut) 40px;
+  background-image:repeating-linear-gradient(180deg,transparent 0 47px,rgba(23,32,26,.06) 47px 48px)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;
+  background:repeating-linear-gradient(90deg,var(--awning) 0 22px,#f4f0e6 22px 44px);
+  -webkit-mask:radial-gradient(circle at 11px 0,#000 11px,transparent 11.5px) 0 0/22px 14px repeat-x;
+          mask:radial-gradient(circle at 11px 0,#000 11px,transparent 11.5px) 0 0/22px 14px repeat-x;z-index:2}
+.kicker{margin:0 0 18px;font:500 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker span{background:var(--ink);color:var(--facade);padding:3px 7px;letter-spacing:.04em}
+h1{margin:0;font:900 clamp(84px,27vw,200px)/.82 var(--display);text-transform:uppercase;letter-spacing:-.01em;color:var(--ink)}
+h1 .pre{display:block;font:500 clamp(22px,6vw,34px)/1 var(--display);letter-spacing:.32em;margin:0 0 10px 3px;color:var(--awning-d)}
+.rating{display:inline-flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:22px 0 0;text-decoration:none;padding:10px 14px 10px 12px;background:var(--chalk);border:1px solid var(--ink)}
+.rv{font:700 30px/1 var(--display)}
+.stars{display:inline-flex;gap:2px}
+.st{position:relative;width:18px;height:18px}
+.st svg{position:absolute;inset:0;width:18px;height:18px;fill:rgba(23,32,26,.18)}
+.st svg+svg{fill:var(--awning);clip-path:inset(0 calc(100% - var(--f)) 0 0)}
+.rc{font-size:14px;color:var(--muted)}
+.rc b{color:var(--ink)}
+.lead{font-size:clamp(18px,4.6vw,22px);line-height:1.45;max-width:30ch;margin:22px 0 26px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 20px;text-decoration:none;font-weight:600;font-size:16px;transition:background .2s,color .2s}
+.btn-main{background:var(--awning);color:#fff}
+.btn-main .mono{opacity:.85;font-weight:400}
+.btn-main:hover{background:var(--awning-d)}
+.btn-ghost{border:1.5px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--facade)}
+.hero-ph{margin:40px 0 0}
+.frame{background:var(--chalk);padding:10px 10px 0;border:1px solid var(--ink);max-width:640px}
+.frame img{width:100%;filter:saturate(.92) contrast(1.03)}
+.hero-ph figcaption{max-width:640px;display:flex;flex-direction:column;gap:2px;font-size:13px;color:var(--muted);background:var(--chalk);border:1px solid var(--ink);border-top:0;padding:10px 12px 12px}
+.hero-ph figcaption .mono{color:var(--ink);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
 
-/* cinta de especialidades */
-.cinta{background:var(--accent);color:#111;overflow:hidden;white-space:nowrap;padding:16px 0;font:600 clamp(1.1rem,2.4vw,1.5rem)/1 var(--display)}
-.cinta div{display:inline-flex;gap:28px;animation:cinta 40s linear infinite;padding-left:28px}
-.cinta i{font-style:normal;opacity:.5}
-@keyframes cinta{to{transform:translateX(-50%)}}
+/* section heads */
+section{scroll-margin-top:20px}
+.sh{margin:0 0 36px}
+.eyebrow{display:flex;gap:12px;align-items:baseline;margin:0 0 14px;font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.12em}
+.eyebrow .mono{font-size:12px;padding-right:12px;border-right:1px solid currentColor}
+h2{margin:0;font:700 clamp(40px,10vw,84px)/.92 var(--display);text-transform:uppercase;letter-spacing:.005em;max-width:16ch}
 
-section{padding:clamp(72px,11vw,140px) 0}
-section h2{font-size:clamp(2.4rem,6vw,4.4rem);margin:14px 0 36px}
-
-/* la casa */
-.casa .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,90px);align-items:center}
-.casa p.texto{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.6;max-width:34ch}
-.casa p.texto::first-letter{font:600 4.2em/.8 var(--display);float:left;margin:.08em .1em 0 0;color:var(--accent)}
-.casa-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px 160px 6px 6px}
-.monograma{display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,color-mix(in oklab,var(--accent) 60%,var(--surface)),var(--accent2));}
-.monograma span{font:600 clamp(9rem,22vw,16rem)/1 var(--display);color:rgba(255,255,255,.88)}
-
-/* carta */
-.carta{background:var(--surface);border-block:1px solid var(--line)}
-.carta .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px 72px}
-.grupo h3{font-size:1.6rem;color:var(--accent);margin-bottom:10px}
-.grupo ul{list-style:none}
-.grupo li{padding:16px 0;border-bottom:1px solid var(--line)}
-.plato{display:flex;align-items:baseline;gap:10px}
-.pn{font:600 clamp(1.2rem,2vw,1.45rem)/1.25 var(--display)}
-.dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
-.pp{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
-.grupo li p{color:var(--muted);margin-top:4px;font-size:.98rem}
-
-/* galería */
-.gal{columns:3 260px;column-gap:14px}
-.gal img{width:100%;margin-bottom:14px;border-radius:6px;break-inside:avoid}
+/* carta / pizarra */
+.carta{background:var(--slate);color:var(--chalk);padding:88px 0 72px;
+  background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1.2px);background-size:5px 5px}
+.carta .eyebrow{color:var(--facade)}
+.dishes{list-style:none;margin:0;padding:0;border-top:1px solid rgba(241,239,230,.25)}
+.dish{display:grid;grid-template-columns:44px 1fr;gap:4px 12px;padding:22px 0;border-bottom:1px dashed rgba(241,239,230,.25)}
+.dn{font:500 13px/1.9 var(--mono);color:var(--facade)}
+.dish h3{margin:0 0 6px;font:700 clamp(30px,8vw,46px)/1 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.dish p{margin:0;color:rgba(241,239,230,.78);max-width:46ch}
+.carta-foot{margin-top:28px;display:grid;gap:12px;color:rgba(241,239,230,.85)}
+.carta-foot p{margin:0;max-width:52ch}
+.price{color:var(--facade);text-transform:uppercase;letter-spacing:.08em}
 
 /* reseñas */
-.opiniones .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px);align-items:start}
-.bigrate b{display:block;font:600 clamp(6rem,14vw,10rem)/.85 var(--display);color:var(--accent)}
-.bigrate span{display:block;color:#f5b301;font-size:1.6rem;letter-spacing:4px;margin:14px 0 6px}
-.bigrate small{color:var(--muted)}
-.reviews{display:grid;gap:22px}
-.review{padding:28px 30px;background:var(--surface);border:1px solid var(--line);border-radius:4px 28px 28px 28px}
-.review blockquote{font:500 clamp(1.25rem,2.3vw,1.6rem)/1.35 var(--display)}
-.review blockquote::before{content:"“";color:var(--accent)} .review blockquote::after{content:"”";color:var(--accent)}
-.review figcaption{margin-top:12px;color:var(--muted);font-size:.92rem}
+.resenas{padding:88px 0 80px;background:var(--stone)}
+.scores{display:grid;gap:0;border-top:1.5px solid var(--ink);margin-bottom:40px}
+.score{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.score .big{font:900 clamp(72px,20vw,120px)/.85 var(--display);color:var(--awning)}
+.score p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.score p b{color:var(--ink);font-size:17px}
+.revs{display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;margin:0 calc(var(--gut) * -1);padding-left:var(--gut);padding-right:var(--gut);scroll-padding-left:var(--gut);scrollbar-width:thin}
+.rev{scroll-snap-align:start;margin:0;background:var(--chalk);padding:22px 20px 20px;border-top:3px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.rn{font:500 12px/1 var(--mono);color:var(--awning)}
+.rn i{font-style:normal;color:var(--muted)}
+.rev blockquote{margin:0}
+.rev blockquote p{margin:0;font:500 clamp(22px,5.8vw,27px)/1.18 var(--sans);letter-spacing:-.01em}
+.tr{font:400 11px/1 var(--mono);color:var(--muted);letter-spacing:.02em;white-space:nowrap}
+.rev figcaption{font-size:14px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.rev figcaption b{color:var(--ink)}
+
+/* casa */
+.casa{background:var(--facade-2);padding:88px 0}
+.casa-body p{font-size:clamp(19px,4.8vw,24px);line-height:1.45;margin:0 0 18px;max-width:34ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;margin:32px 0 0;border-top:1.5px solid var(--ink)}
+.facts div{padding:14px 12px 14px 0;border-bottom:1px solid var(--rule)}
+.facts dt{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.facts dd{margin:4px 0 0;font:700 22px/1.1 var(--display);text-transform:uppercase}
 
 /* visita */
-.visita{background:#8c2f2a;color:#fff}
-.visita .eyebrow{color:color-mix(in oklab,var(--accent) 80%,#fff)}
-.visita .wrap.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px)}
-.visita h3{font-size:1.5rem;margin-bottom:14px}
-.horario{width:100%;border-collapse:collapse}
-.horario th,.horario td{text-align:left;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18);font-weight:400}
-.horario td{text-align:right;font-variant-numeric:tabular-nums}
-.horario tr.hoy{font-weight:700} .horario tr.hoy th::after{content:" ●";color:var(--accent)}
-.visita .muted{color:rgba(255,255,255,.75)}
-.dir{font:600 clamp(1.3rem,2.4vw,1.8rem)/1.3 var(--display);margin-bottom:22px}
-.visita .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.visita .btn.glass{border-color:rgba(255,255,255,.4)}
+.visit{padding:88px 0 80px;background:var(--stone)}
+.visit-grid{display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.vb{padding:22px 0;border-bottom:1px solid var(--rule)}
+.vb h3{margin:0 0 10px;font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--awning-d)}
+.vb p{margin:0 0 10px;font-size:18px}
+.vb table{border-collapse:collapse;width:100%;font-size:16px}
+.vb tr{display:block;padding:6px 0}
+.vb th{display:block;text-align:left;font-weight:500;padding:0}
+.vb td{display:block;padding:2px 0 0;font-family:var(--mono);font-size:14px;white-space:nowrap}
+.vb .note{font-size:13px;color:var(--muted);margin-top:8px}
+.tel{font:700 38px/1 var(--display);text-decoration:none;letter-spacing:.02em}
+.lnk{display:inline-block;font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px;padding:6px 0}
+.lnk:hover{color:var(--awning-d)}
 
-footer{padding:36px 0 calc(110px + env(safe-area-inset-bottom,0px));font-size:.9rem;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+/* footer */
+.foot{background:var(--slate);color:var(--chalk);padding:48px 0 40px;font-size:15px}
+.foot p{margin:0 0 8px}
+.fname{font:900 44px/1 var(--display);text-transform:uppercase}
+.foot .langs{margin-top:16px}
 
-.fab{position:fixed;right:18px;bottom:calc(58px + env(safe-area-inset-bottom,0px));z-index:25;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.fab svg{width:30px;height:30px;fill:#fff}
-.demo{position:fixed;inset:auto 0 0;z-index:40;background:#111;color:#fff;text-align:center;font:500 12.5px/1.4 system-ui,sans-serif;padding:9px 14px calc(9px + env(safe-area-inset-bottom,0px))}
+/* dock: barra de acciones + franja demo */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50}
+.bar{display:grid;grid-template-columns:repeat(3,1fr);background:var(--ink);border-top:1px solid rgba(255,255,255,.12)}
+.bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:58px;color:var(--chalk);text-decoration:none;font-size:13px;font-weight:600}
+.bar a:first-child{background:var(--awning)}
+.bar a+a{border-left:1px solid rgba(255,255,255,.12)}
+.bar svg{width:20px;height:20px;fill:currentColor}
+.demo{margin:0;background:#f4f0e6;color:var(--ink);font:500 11px/1.3 var(--mono);text-align:center;padding:7px 10px calc(7px + env(safe-area-inset-bottom));letter-spacing:.02em;border-top:1px solid var(--rule)}
 
-.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-.js .reveal.oculto{opacity:0;transform:translateY(28px)}
-@media (prefers-reduced-motion:reduce){.cinta div{animation:none} .js .reveal.oculto{opacity:1;transform:none}}
-@media (max-width:820px){
-  .casa .wrap,.opiniones .wrap,.visita .wrap.cols{grid-template-columns:1fr}
-  .top .cta{display:none}
-  .casa-img{aspect-ratio:4/3;border-radius:6px 90px 6px 6px}
+/* reveal (contenido visible sin JS) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  :root{--gut:40px}
+  .revs{grid-auto-columns:46%}
+  .scores{grid-template-columns:1fr 1fr;column-gap:40px}
+  .visit-grid{grid-template-columns:repeat(3,1fr);column-gap:40px}
+  .vb{border-bottom:0}
+  .facts{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:1024px){
+  :root{--dock:30px}
+  .bar{display:none}
+  .top{padding:22px 40px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:120px max(40px,calc((100vw - 1180px)/2)) 72px}
+  .hero-ph{margin:0;justify-self:end;width:100%;max-width:600px}
+  h1{font-size:clamp(150px,13vw,200px)}
+  .carta .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+  .carta .sh{position:sticky;top:40px}
+  .carta-foot{grid-column:2}
+  .dish{grid-template-columns:64px 1fr}
+  .revs{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;margin:0;padding:0;gap:20px}
+  .rev:nth-child(1),.rev:nth-child(6){grid-column:span 2}
+  .rev:nth-child(1) blockquote p,.rev:nth-child(6) blockquote p{font-size:34px}
+  .casa-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
 }
 </style>
 </head>
 <body>
-<header class="top" id="top"><div class="wrap">
-<a class="brand" href="#">Tasca El Arado</a>
-<nav><div class="langs"><a href="../">ES</a><a href="../en/">EN</a><a href="../de/" aria-current=page>DE</a></div><a class="cta" href="tel:+34677467090">Tisch reservieren</a></nav>
-</div></header>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Tasca El Arado"><span class="mk" aria-hidden="true"></span>El Arado</a>
+  <nav class="langs" aria-label="Idioma / Language / Sprache"><a href="../index.html" hreflang="es" lang="es">ES</a><a href="../en/index.html" hreflang="en" lang="en">EN</a><a href="index.html" hreflang="de" lang="de" aria-current="page">DE</a></nav>
+</header>
 
-<section class="hero" style="padding:0">
-<div class="ghost" aria-hidden="true">T</div>
-<div class="wrap">
-<span class="eyebrow">Kanarische Tasca · Puerto de la Cruz</span>
-<h1>Tasca El Arado</h1>
-<p class="lema">Echte kanarische Küche und familiäre Gastfreundschaft in Puerto de la Cruz.</p>
-<div class="row">
-<a class="btn main" href="tel:+34677467090"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Anrufen</a>
-<a class="btn glass" href="https://wa.me/34677467090?text=Hallo%2C%20ich%20schreibe%20Ihnen%20%C3%BCber%20Ihre%20Webseite.">WhatsApp</a>
-<a class="btn glass" href="https://www.google.com/maps/search/?api=1&query=Tasca%20El%20Arado%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Route</a>
-</div>
-<div class="row"><div class="rating"><b>4.4</b><span>★★★★★</span><small>950+ Google-Bewertungen</small></div></div>
-</div>
+<main id="main">
+<section class="hero">
+  <div class="hero-txt">
+    <p class="kicker"><span>Nr. 22</span>Kanarische Tasca · Puerto Viejo, Puerto de la Cruz</p>
+    <h1><span class="pre">Tasca</span>El Arado</h1>
+    <a class="rating" href="#resenas">
+      <span class="rv">4,4</span><span class="stars" aria-hidden="true"><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:40%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></span>
+      <span class="rc"><b>955</b> Bewertungen bei Google</span>
+    </a>
+    <p class="lead">Echte kanarische Küche und familiäre Gastfreundschaft. Ziege, Almogrote, Inselkäse und der Käsekuchen, den alle bestellen.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="tel:+34677467090">Anrufen & reservieren <span class="mono">677 46 70 90</span></a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Tasca+El+Arado%2C+Lugar+Puerto+Viejo+22%2C+Puerto+de+la+Cruz" target="_blank" rel="noopener">Anfahrt ↗</a>
+    </div>
+  </div>
+  <figure class="hero-ph">
+    <div class="frame"><img src="../img/terraza.jpg" width="773" height="580" alt="Terrasse der Tasca El Arado mit weißen Schirmen, Tischen und Kreidetafeln unter einem grünen Gebäude" fetchpriority="high"></div>
+    <figcaption><span class="mono">Lugar Puerto Viejo 22</span>Unsere Terrasse unter dem grünen Haus in Puerto Viejo</figcaption>
+  </figure>
 </section>
 
-<div class="cinta" aria-hidden="true"><div><span>Ziegenfleisch</span><i>✦</i><span>Entrecôte mit Almogrote</span><i>✦</i><span>Käse von der Insel</span><i>✦</i><span>Hausgemachter Käsekuchen</span><i>✦</i><span>Ziegenfleisch</span><i>✦</i><span>Entrecôte mit Almogrote</span><i>✦</i><span>Käse von der Insel</span><i>✦</i><span>Hausgemachter Käsekuchen</span><i>✦</i></div></div>
+<section class="carta" id="carta" aria-labelledby="h-carta">
+  <div class="wrap">
+    <header class="sh"><p class="eyebrow"><span class="mono">01</span>Die Karte</p><h2 id="h-carta">Immer auf dem Tisch</h2></header>
+    <ol class="dishes"><li class="dish reveal"><span class="dn">01</span><div><h3>Ziegenfleisch</h3><p>Das klassische kanarische Rezept, langsam geschmort. Fast jeder Gast empfiehlt es.</p></div></li><li class="dish reveal"><span class="dn">02</span><div><h3>Entrecôte mit Almogrote</h3><p>Mit der traditionellen Käsecreme aus La Gomera.</p></div></li><li class="dish reveal"><span class="dn">03</span><div><h3>Käse von der Insel</h3><p>Eine Auswahl kanarischer Käsesorten zum Teilen.</p></div></li><li class="dish reveal"><span class="dn">04</span><div><h3>Hausgemachter Käsekuchen</h3><p>Das Dessert des Hauses. Hier gebacken.</p></div></li></ol>
+    <div class="carta-foot reveal"><p>Außerdem: Papas con mojo, Fisch, Stockfisch und das Tagesmenü auf der Tafel an der Tür.</p><p class="mono price">Durchschnittlich ca. 10–20 € pro Person</p></div>
+  </div>
+</section>
 
-<section class="casa"><div class="wrap">
-<div class="reveal"><span class="eyebrow">Das Haus</span><h2>Hausmannskost wie eh und je</h2>
-<p class="texto">Im El Arado kochen wir wie zu Hause: Ziegenfleisch, Käse von der Insel, Entrecôte mit Almogrote und hausgemachte Desserts. Eine traditionelle Tasca mit familiärer Atmosphäre und an manchen Abenden Live-Musik.</p></div>
-<div class="casa-img monograma reveal" aria-hidden="true"><span>T</span></div>
-</div></section>
+<section class="resenas" id="resenas" aria-labelledby="h-res">
+  <div class="wrap">
+    <header class="sh"><p class="eyebrow"><span class="mono">02</span>Das sagen unsere Gäste</p><h2 id="h-res">Fast tausend Google-Bewertungen. Hier ein paar davon.</h2></header>
+    <div class="scores reveal">
+      <div class="score"><span class="big">4,4</span><div><span class="stars" aria-hidden="true"><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:40%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></span><p><b>955</b> Bewertungen · Google</p></div></div>
+      <div class="score"><span class="big">4,5</span><div><span class="stars" aria-hidden="true"><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:100%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="st" style="--f:50%"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></span><p><b>87</b> Bewertungen · TripAdvisor</p></div></div>
+    </div>
+    <div class="revs" tabindex="0" aria-label="Das sagen unsere Gäste">
+<figure class="rev reveal"><span class="rn">01<i>/06</i></span>
+<blockquote lang="de"><p>“100 % kanarisches Essen. Sehr familiär, man fühlt sich wie zu Hause.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Rosa M.</b> · Google</figcaption></figure>
+<figure class="rev reveal"><span class="rn">02<i>/06</i></span>
+<blockquote lang="de"><p>“Man isst hier richtig gut, echtes Essen. Wer typisch kanarisch essen will, ist hier richtig.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Maribel R.</b> · Google</figcaption></figure>
+<figure class="rev reveal"><span class="rn">03<i>/06</i></span>
+<blockquote lang="de"><p>“Ausgezeichnet! Ein Muss! Das Essen ist großartig, wirklich hausgemacht und sehr traditionell.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Muriel</b> · Restaurant Guru</figcaption></figure>
+<figure class="rev reveal"><span class="rn">04<i>/06</i></span>
+<blockquote lang="de"><p>“Das Ziegenfleisch — köstlich.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Alberto G.</b> · Google</figcaption></figure>
+<figure class="rev reveal"><span class="rn">05<i>/06</i></span>
+<blockquote lang="de"><p>“Typische Hausmannskost […] Wunderbarer Service.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Clara G.</b> · Google</figcaption></figure>
+<figure class="rev reveal"><span class="rn">06<i>/06</i></span>
+<blockquote lang="de"><p>“Köstliches Essen und herzlicher Service.” <span class="tr">(übersetzt)</span></p></blockquote>
+<figcaption><b>Cris</b> · Google</figcaption></figure>
+    </div>
+  </div>
+</section>
 
-<section class="carta"><div class="wrap">
-<span class="eyebrow">Die Karte</span><h2>Immer auf dem Tisch</h2>
-<div class="grid"><div class="grupo reveal"><ul><li><div class="plato"><span class="pn">Ziegenfleisch</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Traditionelles kanarisches Rezept, langsam geschmort.</p></li><li><div class="plato"><span class="pn">Entrecôte mit Almogrote</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Mit der klassischen Käsecreme aus La Gomera.</p></li><li><div class="plato"><span class="pn">Käse von der Insel</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Eine Auswahl kanarischer Käsesorten.</p></li><li><div class="plato"><span class="pn">Hausgemachter Käsekuchen</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Der Lieblingsnachtisch des Hauses.</p></li></ul></div></div>
-</div></section>
+<section class="casa" id="casa" aria-labelledby="h-casa">
+  <div class="wrap casa-grid">
+    <header class="sh"><p class="eyebrow"><span class="mono">03</span>Das Haus</p><h2 id="h-casa">Hausmannskost wie eh und je</h2></header>
+    <div class="casa-body reveal"><p>Im El Arado kochen wir wie zu Hause: Ziegenfleisch, Käse von der Insel, Entrecôte mit Almogrote und hausgemachte Desserts.</p><p>Eine traditionelle Tasca in der Lugar Puerto Viejo, mit Tischen auf der Terrasse, familiärer Atmosphäre und an manchen Abenden Live-Musik.</p><dl class="facts"><div><dt>Küche</dt><dd>Kanarisch, hausgemacht</dd></div><div><dt>Atmosphäre</dt><dd>Familiär</dd></div><div><dt>Manche Abende</dt><dd>Live-Musik</dd></div><div><dt>Zahlung</dt><dd>Karte und bar</dd></div></dl></div>
+  </div>
+</section>
 
+<section class="visit" id="visita" aria-labelledby="h-visit">
+  <div class="wrap">
+    <header class="sh"><p class="eyebrow"><span class="mono">04</span>Besuchen Sie uns</p><h2 id="h-visit">Oft voll. Rufen Sie lieber vorher an.</h2></header>
+    <div class="visit-grid">
+      <div class="vb reveal"><h3>Adresse</h3><p>Lugar Puerto Viejo 22<br>38400 Puerto de la Cruz<br>Tenerife</p><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Tasca+El+Arado%2C+Lugar+Puerto+Viejo+22%2C+Puerto+de+la+Cruz" target="_blank" rel="noopener">Anfahrt ↗</a></div>
+      <div class="vb reveal"><h3>Öffnungszeiten</h3><table><tr><th scope="row">Dienstag bis Samstag</th><td>12:00–16:00 · 19:00–23:30</td></tr><tr><th scope="row">Sonntag & Montag</th><td>Geschlossen</td></tr></table><p class="note">Zeiten ohne Gewähr: bitte telefonisch bestätigen.</p></div>
+      <div class="vb reveal"><h3>Telefon</h3><p><a class="tel" href="tel:+34677467090">677 46 70 90</a></p><a class="lnk" href="https://wa.me/34677467090" target="_blank" rel="noopener">Schreiben Sie uns per WhatsApp ↗</a></div>
+    </div>
+  </div>
+</section>
+</main>
 
+<footer class="foot">
+  <div class="wrap">
+    <p class="fname">Tasca El Arado</p>
+    <p>Lugar Puerto Viejo 22 · Puerto de la Cruz · <a href="tel:+34677467090">677 46 70 90</a></p>
+    <nav class="langs" aria-label="Idioma / Language / Sprache"><a href="../index.html" hreflang="es" lang="es">Español</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="index.html" hreflang="de" lang="de" aria-current="page">Deutsch</a></nav>
+  </div>
+</footer>
 
-<section class="opiniones"><div class="wrap"><div class="bigrate reveal"><b>4.4</b><span>★★★★★</span><small>Durchschnittsbewertung · 950+ Google-Bewertungen</small></div><div><span class="eyebrow">Das sagen unsere Gäste</span><div class="reviews" style="margin-top:22px"><figure class="review reveal"><blockquote>100 % kanarisches Essen. Sehr familiär, man fühlt sich wie zu Hause. (übersetzt)</blockquote><figcaption>★★★★★ · Reseña en Google</figcaption></figure></div></div></div></section>
+<div class="dock">
+  <nav class="bar" aria-label="Anrufen · WhatsApp · Anfahrt">
+    <a href="tel:+34677467090"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Anrufen</a>
+    <a href="https://wa.me/34677467090" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3s-.9.9-.9 2.2.9 2.5 1 2.7 1.8 2.8 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Tasca+El+Arado%2C+Lugar+Puerto+Viejo+22%2C+Puerto+de+la+Cruz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>Anfahrt</a>
+  </nav>
+  <p class="demo">Designvorschlag für dieses Lokal · Nicht die offizielle Website</p>
+</div>
 
-<section class="visita"><div class="wrap">
-<span class="eyebrow">Besuchen Sie uns</span><h2>Besuchen Sie uns</h2>
-<div class="cols wrap" style="width:100%">
-<div><h3>Öffnungszeiten</h3><p class="muted">Rufen Sie uns an oder schreiben Sie uns für die heutigen Öffnungszeiten.</p></div>
-<div><h3>Adresse</h3><p class="dir">Lugar Puerto Viejo 22, 38400 Puerto de la Cruz, Tenerife</p>
-<div class="acciones"><a class="btn main" href="https://www.google.com/maps/search/?api=1&query=Tasca%20El%20Arado%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">In Google Maps öffnen</a>
-<a class="btn glass" href="tel:+34677467090">+34 677 46 70 90</a></div></div>
-</div></div></section>
-
-<footer><div class="wrap"><span>© Tasca El Arado</span><span>Lugar Puerto Viejo 22, 38400 Puerto de la Cruz, Tenerife</span></div></footer>
-
-<a class="fab" href="https://wa.me/34677467090?text=Hallo%2C%20ich%20schreibe%20Ihnen%20%C3%BCber%20Ihre%20Webseite." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
-<div class="demo">Designvorschlag für diesen Betrieb · Nicht die offizielle Webseite</div>
 <script>
 (function(){
-  document.documentElement.classList.add("js");
-  var top=document.getElementById("top");
-  var onScroll=function(){top.classList.toggle("solid",scrollY>60)}; onScroll(); addEventListener("scroll",onScroll,{passive:true});
-  if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove("oculto");io.unobserve(x.target)}})},{rootMargin:"0px 0px -8% 0px"});
-    document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top>innerHeight){el.classList.add("oculto");io.observe(el)}});
-  }
-  var h={"0": [], "1": [], "2": [], "3": [], "4": [], "5": [], "6": []};
-  var ahora=new Date(new Date().toLocaleString("en-US",{timeZone:"Atlantic/Canary"}));
-  var dia=(ahora.getDay()+6)%7, min=ahora.getHours()*60+ahora.getMinutes();
-  var fila=document.querySelector('tr[data-dia="'+dia+'"]'); if(fila) fila.className="hoy";
-  var el=document.getElementById("estado"); if(!el) return;
-  var abierto=(h[dia]||[]).some(function(r){
-    var p=r.replace(/\s/g,"").split(/[-–]/); if(p.length<2) return false;
-    var a=p[0].split(":"), b=p[1].split(":"), ini=+a[0]*60+(+a[1]||0), fin=+b[0]*60+(+b[1]||0);
-    if(fin<=ini) fin+=1440; return (min>=ini&&min<fin)||(min+1440>=ini&&min+1440<fin);
-  });
-  el.textContent=abierto?"Jetzt geöffnet":"Jetzt geschlossen"; el.className="estado "+(abierto?"si":"no");
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>

@@ -1,208 +1,339 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-loc="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Alberto&#x27;s Bar · Bar with a view · Puerto de la Cruz</title>
-<meta name="description" content="The best sunsets in Puerto de la Cruz, with Mount Teide and the ocean as a backdrop.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0d1626">
+<title>Alberto's Bar · Sunset terrace with a view in Puerto de la Cruz</title>
+<meta name="description" content="Panoramic terrace bar by Parque Taoro: sunsets over Puerto de la Cruz, the Atlantic and Mount Teide. Barraquito, sangria, cocktails, German beer and tapas. Rated 4.6★ on Google.">
+<meta name="theme-color" content="#121518">
+<meta property="og:title" content="Alberto's Bar · Sunset terrace with a view in Puerto de la Cruz"><meta property="og:description" content="Panoramic terrace bar by Parque Taoro: sunsets over Puerto de la Cruz, the Atlantic and Mount Teide. Barraquito, sangria, cocktails, German beer and tapas. Rated 4.6★ on Google."><meta property="og:image" content="../img/terraza.jpg">
+<link rel="alternate" hreflang="es" href="../"><link rel="alternate" hreflang="en" href="./"><link rel="alternate" hreflang="de" href="../de/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarOrPub", "name": "Alberto's Bar", "telephone": "+34 922 38 60 61", "address": "Calle Malpaís 5, 38400 Puerto de la Cruz, Tenerife"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../img/terraza.jpg">
 <style>
-:root{--bg:#0d1626;--surface:#142036;--ink:#f6efe6;--muted:#a9b3c4;--accent:#ff8f4d;
---accent2:#ffcc66;--line:rgba(246,239,230,.14);--hero-base:#3a1d2e;--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Inter Tight',system-ui,sans-serif;
-color-scheme:dark}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font:400 1.0625rem/1.65 var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
+:root{
+  --night:#121518; --night2:#1a1f24; --dusk:#203646; --ink:#121518;
+  --sky:#eef0ed; --line:rgba(238,240,237,.16); --line-d:rgba(18,21,24,.14);
+  --ember:#f08a3c; --ember-d:#b4521d; --gold:#f6c177; --muted:#a6adb2; --muted-d:#5a6268;
+  --display:"Big Shoulders Display",system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Figtree",system-ui,sans-serif;
+  --gut:clamp(16px,5vw,72px);
+  --bars:104px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--sky);font:400 17px/1.6 var(--sans);overflow-x:hidden;padding-bottom:var(--bars)}
+img{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;text-wrap:balance;letter-spacing:-.01em}
-.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
-.eyebrow{font:600 .78rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.muted{color:var(--muted)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:8px 12px;z-index:100}
+.skip:focus{left:8px}
+em{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:-.01em}
+.wrap{padding-inline:var(--gut);max-width:1440px;margin-inline:auto}
+.kicker{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.kicker b{font:500 13px/1 var(--display);letter-spacing:.08em;color:var(--muted)}
+.kicker::after{content:"";height:1px;flex:0 0 48px;background:currentColor;opacity:.5}
+h2{font:700 clamp(46px,9vw,112px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.005em;margin:22px 0 0}
+h2 em{font-size:.86em;display:inline-block;margin-top:.08em;color:var(--gold)}
 
-/* barra superior */
-.top{position:fixed;inset:0 0 auto;z-index:30;padding:calc(14px + env(safe-area-inset-top,0px)) 0 14px;transition:background .3s,backdrop-filter .3s}
-.top.solid{background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;color:#fff}
-.top.solid .brand{color:var(--ink)}
-.top nav{display:flex;align-items:center;gap:18px}
-.langs{display:flex;gap:2px;background:rgba(0,0,0,.25);border-radius:999px;padding:3px}
-.langs a{font:600 .72rem/1 var(--body);letter-spacing:.08em;text-decoration:none;color:#fff;padding:7px 10px;border-radius:999px;opacity:.75}
-.langs a[aria-current]{background:#fff;color:#111;opacity:1}
-.top .cta{font:600 .9rem var(--body);text-decoration:none;background:var(--accent);color:#111;padding:10px 18px;border-radius:999px}
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.mark{font:800 22px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;display:flex;align-items:baseline;gap:8px}
+.mark small{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--sky);opacity:.75}
+.navl{display:none;gap:28px;font-size:14px}
+.navl a{text-decoration:none;opacity:.85}.navl a:hover{opacity:1;color:var(--gold)}
+.lang{display:flex;gap:2px;font:600 12px/1 var(--sans);letter-spacing:.12em}
+.lang a{padding:8px 7px;text-decoration:none;opacity:.6}
+.lang a[aria-current]{opacity:1;color:var(--gold);box-shadow:inset 0 -1px 0 var(--gold)}
 
-/* portada */
-.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;background:url('../img/albertos-bar-1.jpg') center/cover;overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.1) 30%,rgba(0,0,0,.78) 100%),linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 80%)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero .ghost{position:absolute;right:-.06em;top:50%;transform:translateY(-62%);font:600 clamp(14rem,42vw,40rem)/.8 var(--display);color:rgba(255,255,255,.07);z-index:-1;pointer-events:none;user-select:none;display:none;}
-.hero .wrap{padding-block:140px 72px;display:grid;gap:22px}
-.hero .eyebrow{color:var(--accent)}
-.hero h1{font-size:clamp(3.2rem,11vw,8.5rem);max-width:12ch}
-.hero .lema{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:40ch;opacity:.92}
-.hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:6px}
-.btn{display:inline-flex;align-items:center;gap:10px;font:600 1rem var(--body);text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.main{background:var(--accent);color:#111}
-.btn.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px)}
-.btn svg{width:18px;height:18px;fill:currentColor}
-.rating{display:flex;align-items:baseline;gap:8px}
-.rating b{font:600 1.6rem/1 var(--display)} .rating span{color:#ffc94d;letter-spacing:2px} .rating small{opacity:.8}
-.estado{display:inline-flex;align-items:center;gap:8px;font:600 .85rem var(--body);padding:7px 14px;border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(6px)}
-.estado::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
-.estado.si{color:#7ee2a0} .estado.no{color:#ff9d8a}
+/* hero */
+.hero{position:relative;background:var(--night)}
+.hero-media{position:relative;height:56svh;min-height:330px;max-height:560px;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:76% 42%;filter:saturate(1.08) contrast(1.04) sepia(.12)}
+.hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(240,138,60,.28),rgba(240,138,60,0) 55%);mix-blend-mode:soft-light}
+.hero-media::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,21,24,.65) 0,rgba(18,21,24,0) 26%,rgba(18,21,24,0) 52%,rgba(18,21,24,.92) 100%)}
+.hero-title{position:absolute;left:0;right:0;bottom:0;z-index:2}
+.hero h1{margin:0;font:800 clamp(72px,21vw,220px)/.8 var(--display);text-transform:uppercase;letter-spacing:-.01em}
+.hero h1 span{display:block;font:300 italic clamp(22px,5.4vw,46px)/1 var(--serif);text-transform:none;color:var(--gold);letter-spacing:0;margin-bottom:6px}
+.hero-body{padding-top:18px;padding-bottom:40px}
+.eyebrow{font:600 11.5px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.rate{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+.rate .num{font:700 34px/1 var(--display)}
+.stars{display:inline-flex;gap:2px}.stars svg{width:18px;height:18px;fill:var(--gold)}
+.rate .cnt{font-size:14px;color:var(--sky);opacity:.85;border-left:1px solid var(--line);padding-left:12px}
+.lead{font:400 clamp(19px,2.2vw,24px)/1.45 var(--serif);margin:0 0 24px;max-width:34ch}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;font:700 15px/1 var(--sans);letter-spacing:.04em;text-decoration:none;border:1px solid var(--ember);background:var(--ember);color:var(--ink)}
+.btn:hover{background:var(--gold);border-color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--sky);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
 
-/* cinta de especialidades */
-.cinta{background:var(--accent);color:#111;overflow:hidden;white-space:nowrap;padding:16px 0;font:600 clamp(1.1rem,2.4vw,1.5rem)/1 var(--display)}
-.cinta div{display:inline-flex;gap:28px;animation:cinta 40s linear infinite;padding-left:28px}
-.cinta i{font-style:normal;opacity:.5}
-@keyframes cinta{to{transform:translateX(-50%)}}
+/* view */
+.view{padding:88px 0 96px;background:var(--night)}
+.view-grid{display:grid;gap:44px}
+.view p.big{font:400 clamp(19px,2vw,22px)/1.55 var(--serif);color:#d9ddda;max-width:46ch;margin:28px 0 0}
+.pano{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--line)}
+.pano li{display:grid;grid-template-columns:56px 1fr;gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.pano .n{font:600 15px/1.4 var(--display);color:var(--ember);letter-spacing:.06em}
+.pano h3{margin:0;font:700 24px/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.pano p{grid-column:2;margin:0;color:var(--muted);font-size:15.5px}
+.frame{position:relative;margin:0}
+.frame .ph{aspect-ratio:4/5;overflow:hidden;background:var(--night2)}
+.frame .ph{position:relative}.frame img{width:100%;height:100%;object-fit:cover;object-position:84% 62%;transform:scale(1.22);transform-origin:84% 66%;filter:saturate(1.1) contrast(1.06) sepia(.22) hue-rotate(-6deg)}
+.frame .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(240,138,60,.35),rgba(32,54,70,.25));mix-blend-mode:soft-light}
+.frame figcaption{display:flex;justify-content:space-between;font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:12px;border-top:1px solid var(--line);margin-top:12px}
 
-section{padding:clamp(72px,11vw,140px) 0}
-section h2{font-size:clamp(2.4rem,6vw,4.4rem);margin:14px 0 36px}
+/* sunset */
+.sun{background:linear-gradient(180deg,var(--dusk) 0%,#2b3d47 38%,#7d4a35 78%,#c76a32 100%);padding:72px 0 0;overflow:hidden;position:relative}
+.sun .wrap{position:relative;z-index:2}
+.sun-row{display:grid;gap:28px;align-items:end}
+.sun-time{font:800 clamp(96px,26vw,260px)/.8 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:18px 0 0}
+.sun-time.nojs{font-size:clamp(56px,14vw,140px);font-family:var(--serif);font-weight:300;font-style:italic;letter-spacing:0}
+.sun-label{font:700 clamp(22px,3vw,30px)/1 var(--display);text-transform:uppercase;letter-spacing:.04em;margin:0}
+.sun-date{font:500 13px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin:8px 0 0}
+.sun-tip{font:400 19px/1.5 var(--serif);max-width:30ch;margin:0}
+.sun-tip strong{font:700 22px/1 var(--display);color:var(--gold);letter-spacing:.03em}
+.horizon{display:block;width:100%;height:auto;margin-top:36px}
 
-/* la casa */
-.casa .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,90px);align-items:center}
-.casa p.texto{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.6;max-width:34ch}
-.casa p.texto::first-letter{font:600 4.2em/.8 var(--display);float:left;margin:.08em .1em 0 0;color:var(--accent)}
-.casa-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px 160px 6px 6px}
-.monograma{display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,color-mix(in oklab,var(--accent) 60%,var(--surface)),var(--accent2));}
-.monograma span{font:600 clamp(9rem,22vw,16rem)/1 var(--display);color:rgba(255,255,255,.88)}
+/* menu */
+.menu{background:var(--sky);color:var(--ink);padding:96px 0}
+.menu .kicker{color:var(--ember-d)}.menu .kicker b{color:var(--muted-d)}
+.menu h2 em{color:var(--ember-d)}
+.mlist{list-style:none;margin:48px 0 0;padding:0;border-top:1px solid var(--ink)}
+.mlist li{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid var(--line-d)}
+.mlist .n{font:600 15px/1.6 var(--display);color:var(--ember-d);letter-spacing:.06em}
+.mlist h3{margin:0;font:700 clamp(28px,4vw,40px)/1 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.mlist p{grid-column:2;margin:0;color:var(--muted-d);font-size:16px;max-width:52ch}
+.price{margin:32px 0 0;font:400 19px/1.5 var(--serif);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.price small{font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d)}
 
-/* carta */
-.carta{background:var(--surface);border-block:1px solid var(--line)}
-.carta .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px 72px}
-.grupo h3{font-size:1.6rem;color:var(--accent);margin-bottom:10px}
-.grupo ul{list-style:none}
-.grupo li{padding:16px 0;border-bottom:1px solid var(--line)}
-.plato{display:flex;align-items:baseline;gap:10px}
-.pn{font:600 clamp(1.2rem,2vw,1.45rem)/1.25 var(--display)}
-.dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
-.pp{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
-.grupo li p{color:var(--muted);margin-top:4px;font-size:.98rem}
+/* reviews */
+.rev{padding:96px 0;background:var(--night)}
+.score{display:grid;gap:8px 28px;margin-top:40px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);grid-template-columns:auto 1fr;align-items:center}
+.score .big{font:800 clamp(96px,16vw,168px)/.8 var(--display);letter-spacing:-.02em}
+.score .stars svg{width:24px;height:24px}
+.score .meta p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.score .meta strong{color:var(--sky);font-weight:600}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);padding:36px var(--gut) 8px;margin:0 calc(var(--gut) * -1);scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.q{scroll-snap-align:start;margin:0;padding:24px 0 0;border-top:2px solid var(--ember);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:250px}
+.q .n{font:600 13px/1 var(--display);letter-spacing:.1em;color:var(--muted)}
+.q blockquote{margin:14px 0 0;font:400 clamp(22px,2.3vw,27px)/1.32 var(--serif);letter-spacing:-.005em}
+.q figcaption{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.q figcaption strong{color:var(--sky);font-weight:600}
+.q .stars svg{width:13px;height:13px}
+.q .tr{font-size:11px;letter-spacing:.06em;opacity:.8}
+.rev-foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--muted)}
+.swipe{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 
-/* galería */
-.gal{columns:3 260px;column-gap:14px}
-.gal img{width:100%;margin-bottom:14px;border-radius:6px;break-inside:avoid}
+/* visit */
+.visit{background:var(--night2);padding:96px 0 104px;border-top:1px solid var(--line)}
+.visit-grid{display:grid;gap:48px;margin-top:44px}
+.addr{font:700 clamp(30px,4.4vw,48px)/1.02 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:0}
+.visit p.walk{font:400 18px/1.55 var(--serif);color:#d9ddda;max-width:44ch;margin:20px 0 28px}
+.hours h3{font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.hours dl{margin:0;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.hours dt{color:var(--muted)}.hours dd{margin:0;font:700 22px/1 var(--display);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.hours p{font-size:14px;color:var(--muted);margin:14px 0 0}
+.phone{display:block;margin-top:26px;font:800 clamp(40px,7vw,64px)/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.phone:hover{color:var(--gold)}
+.coords{font:500 12px/1 var(--sans);letter-spacing:.16em;color:var(--muted);margin-top:14px}
 
-/* reseñas */
-.opiniones .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px);align-items:start}
-.bigrate b{display:block;font:600 clamp(6rem,14vw,10rem)/.85 var(--display);color:var(--accent)}
-.bigrate span{display:block;color:#f5b301;font-size:1.6rem;letter-spacing:4px;margin:14px 0 6px}
-.bigrate small{color:var(--muted)}
-.reviews{display:grid;gap:22px}
-.review{padding:28px 30px;background:var(--surface);border:1px solid var(--line);border-radius:4px 28px 28px 28px}
-.review blockquote{font:500 clamp(1.25rem,2.3vw,1.6rem)/1.35 var(--display)}
-.review blockquote::before{content:"“";color:var(--accent)} .review blockquote::after{content:"”";color:var(--accent)}
-.review figcaption{margin-top:12px;color:var(--muted);font-size:.92rem}
+footer{padding:36px 0 28px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-/* visita */
-.visita{background:#1d2b4a;color:#fff}
-.visita .eyebrow{color:color-mix(in oklab,var(--accent) 80%,#fff)}
-.visita .wrap.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px)}
-.visita h3{font-size:1.5rem;margin-bottom:14px}
-.horario{width:100%;border-collapse:collapse}
-.horario th,.horario td{text-align:left;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18);font-weight:400}
-.horario td{text-align:right;font-variant-numeric:tabular-nums}
-.horario tr.hoy{font-weight:700} .horario tr.hoy th::after{content:" ●";color:var(--accent)}
-.visita .muted{color:rgba(255,255,255,.75)}
-.dir{font:600 clamp(1.3rem,2.4vw,1.8rem)/1.3 var(--display);margin-bottom:22px}
-.visita .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.visita .btn.glass{border-color:rgba(255,255,255,.4)}
+/* fixed bars */
+.bars{position:fixed;left:0;right:0;bottom:0;z-index:50}
+.actions{display:grid;grid-template-columns:1fr 1fr;background:rgba(18,21,24,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.actions a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;font:700 15px/1 var(--sans);letter-spacing:.04em;text-decoration:none}
+.actions a:first-child{background:var(--ember);color:var(--ink)}
+.actions svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
+.demo{background:#0b0d0f;color:#c9ced1;font:500 11px/1.3 var(--sans);letter-spacing:.06em;text-align:center;padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
 
-footer{padding:36px 0 calc(110px + env(safe-area-inset-bottom,0px));font-size:.9rem;color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
 
-.fab{position:fixed;right:18px;bottom:calc(58px + env(safe-area-inset-bottom,0px));z-index:25;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.fab svg{width:30px;height:30px;fill:#fff}
-.demo{position:fixed;inset:auto 0 0;z-index:40;background:#111;color:#fff;text-align:center;font:500 12.5px/1.4 system-ui,sans-serif;padding:9px 14px calc(9px + env(safe-area-inset-bottom,0px))}
-
-.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-.js .reveal.oculto{opacity:0;transform:translateY(28px)}
-@media (prefers-reduced-motion:reduce){.cinta div{animation:none} .js .reveal.oculto{opacity:1;transform:none}}
-@media (max-width:820px){
-  .casa .wrap,.opiniones .wrap,.visita .wrap.cols{grid-template-columns:1fr}
-  .top .cta{display:none}
-  .casa-img{aspect-ratio:4/3;border-radius:6px 90px 6px 6px}
+@media (min-width:760px){
+  .track{grid-auto-columns:calc((100% - 2*var(--gut) - 32px)/2.3)}
+  .view-grid{grid-template-columns:1.05fr .95fr;align-items:end}
+  .sun-row{grid-template-columns:1.3fr 1fr}
+  .visit-grid{grid-template-columns:1.2fr 1fr}
+  .mlist{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+}
+@media (min-width:1080px){
+  :root{--bars:31px}
+  .actions{display:none}
+  .navl{display:flex}
+  .hero-media{height:calc(100svh - 330px);max-height:700px;min-height:400px}
+  .hero-media img{object-position:62% 46%}
+  .hero-body{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;padding-top:28px;padding-bottom:64px}
+  .hero-body .ctas{justify-content:flex-end}
+  .track{grid-auto-columns:calc((100% - 2*var(--gut) - 48px)/3);overflow:visible;grid-auto-flow:row;grid-template-columns:repeat(3,1fr);margin:0;padding:44px 0 0;gap:44px 32px}
+  .swipe{display:none}
+  .frame .ph{aspect-ratio:4/5}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
 }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarOrPub", "name": "Alberto's Bar", "description": "Panoramic terrace bar by Parque Taoro: sunsets over Puerto de la Cruz, the Atlantic and Mount Teide. Barraquito, sangria, cocktails, German beer and tapas. Rated 4.6★ on Google.", "telephone": "+34 922 38 60 61", "image": "img/terraza.jpg", "servesCuisine": ["Café", "Tapas", "Cocktails"], "priceRange": "€", "address": {"@type": "PostalAddress", "streetAddress": "Calle Malpaís 5", "postalCode": "38400", "addressLocality": "Puerto de la Cruz", "addressRegion": "Santa Cruz de Tenerife", "addressCountry": "ES"}, "geo": {"@type": "GeoCoordinates", "latitude": 28.41, "longitude": -16.55}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "bestRating": "5", "reviewCount": "1821"}, "paymentAccepted": "Cash, Visa, Mastercard, American Express, Diners Club"}</script>
 </head>
 <body>
-<header class="top" id="top"><div class="wrap">
-<a class="brand" href="#">Alberto&#x27;s Bar</a>
-<nav><div class="langs"><a href="../">ES</a><a href="../en/" aria-current=page>EN</a><a href="../de/">DE</a></div><a class="cta" href="tel:+34922386061">Book a table</a></nav>
+<a class="skip" href="#main">View</a>
+<header class="top"><div class="wrap">
+ <a class="mark" href="./">Alberto's <small>BAR</small></a>
+ <nav class="navl" aria-label="Main"><a href="#vista">View</a><a href="#carta">Menu</a><a href="#opiniones">Reviews</a><a href="#llegar">Directions</a></nav>
+ <nav class="lang" aria-label="Language"><a href="../" hreflang="es" lang="es">ES</a><a href="./" hreflang="en" lang="en" aria-current="page">EN</a><a href="../de/" hreflang="de" lang="de">DE</a></nav>
 </div></header>
 
-<section class="hero" style="padding:0">
-<div class="ghost" aria-hidden="true">A</div>
-<div class="wrap">
-<span class="eyebrow">Bar with a view · Puerto de la Cruz</span>
-<h1>Alberto&#x27;s Bar</h1>
-<p class="lema">The best sunsets in Puerto de la Cruz, with Mount Teide and the ocean as a backdrop.</p>
-<div class="row">
-<a class="btn main" href="tel:+34922386061"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call</a>
-
-<a class="btn glass" href="https://www.google.com/maps/search/?api=1&query=Alberto%27s%20Bar%2C%20Calle%20Malpa%C3%ADs%205%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Directions</a>
-</div>
-<div class="row"><div class="rating"><b>4.6</b><span>★★★★★</span><small>1.800+ Google reviews</small></div></div>
-</div>
+<main id="main">
+<section class="hero">
+ <div class="hero-media">
+  <img src="../img/terraza.jpg" srcset="../img/terraza-1000.jpg 1000w, ../img/terraza.jpg 1672w" sizes="100vw" width="1672" height="941" alt="Alberto's Bar terrace with white parasols overlooking Puerto de la Cruz and the Orotava valley" fetchpriority="high">
+  <div class="hero-title"><div class="wrap"><h1><span>Puerto de la Cruz</span>Alberto's</h1></div></div>
+ </div>
+ <div class="wrap hero-body">
+  <div>
+   <p class="eyebrow">Bar with a view · Puerto de la Cruz · by Parque Taoro</p>
+   <p class="rate"><span class="num">4,6</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="cnt">1,821 Google reviews</span></p>
+   <p class="lead">The best sunset in Puerto is seen from up here: the town, the Atlantic and Mount Teide — with a barraquito or a sangria in hand.</p>
+  </div>
+  <div class="ctas">
+   <a class="btn" href="tel:+34922386061"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Call · 922 38 60 61</a>
+   <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Alberto%27s%20Bar%2C%20Calle%20Malpa%C3%ADs%205%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+  </div>
+ </div>
 </section>
 
-<div class="cinta" aria-hidden="true"><div><span>Barraquito</span><i>✦</i><span>Sangria &amp; cocktails</span><i>✦</i><span>German beer</span><i>✦</i><span>Tapas, sandwiches &amp; cakes</span><i>✦</i><span>Barraquito</span><i>✦</i><span>Sangria &amp; cocktails</span><i>✦</i><span>German beer</span><i>✦</i><span>Tapas, sandwiches &amp; cakes</span><i>✦</i></div></div>
+<section class="view" id="vista">
+ <div class="wrap view-grid">
+  <div class="rv">
+   <p class="kicker"><b>01</b>The view</p>
+   <h2>Climb up. Sit down.<br><em>Look.</em></h2>
+   <p class="big">Alberto's sits high above the town on Calle Malpaís, a stone's throw from Parque Taoro. From the terrace — white parasols, volcanic garden — the whole of Puerto de la Cruz lies at your feet.</p>
+   <ol class="pano"><li><span class="n">01</span><h3>The town</h3><p>Rooftops and palms of Puerto, all at a glance.</p></li><li><span class="n">02</span><h3>The Atlantic</h3><p>The whole horizon, nothing in the way.</p></li><li><span class="n">03</span><h3>Mount Teide</h3><p>On clear days, the summit at the head of the valley.</p></li></ol>
+  </div>
+  <figure class="frame rv">
+   <div class="ph"><img src="../img/terraza.jpg" width="1672" height="941" loading="lazy" alt="View from the terrace over the Orotava valley and the coast"></div>
+   <figcaption><span>C/ Malpaís 5</span><span>28°24′N · 16°33′W</span></figcaption>
+  </figure>
+ </div>
+</section>
 
-<section class="casa"><div class="wrap">
-<div class="reveal"><span class="eyebrow">The house</span><h2>The best sunset in Puerto</h2>
-<p class="texto">Head up the hill near Parque Taoro and enjoy a panoramic view over the town, the ocean and Mount Teide. Barraquito coffee, sangria, cocktails, German beer, sandwiches, tapas and cakes — served by staff who make you feel at home.</p></div>
-<div class="casa-img monograma reveal" aria-hidden="true"><span>A</span></div>
-</div></section>
+<section class="sun" aria-labelledby="sunl">
+ <div class="wrap">
+  <p class="kicker"><b>02</b>Today on the terrace</p>
+  <div class="sun-row">
+   <div>
+    <p class="sun-time nojs" id="sunset">every evening</p>
+   </div>
+   <div>
+    <p class="sun-label" id="sunl">Sunset</p>
+    <p class="sun-date" id="sundate">Puerto de la Cruz</p>
+    <p class="sun-tip" id="suntip" hidden style="margin-top:18px">Arrive around <strong id="arrive"></strong> to get a table with a view.</p>
+   </div>
+  </div>
+ </div>
+ <svg class="horizon" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+<defs><radialGradient id="g" cx="50%" cy="100%" r="60%"><stop offset="0" stop-color="#f6c177" stop-opacity=".9"/><stop offset="1" stop-color="#f6c177" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1440" height="220" fill="url(#g)" opacity=".55"/>
+<circle cx="980" cy="160" r="62" fill="#f6c177"/>
+<rect x="0" y="160" width="1440" height="60" fill="#121518"/>
+<g stroke="#f6c177" stroke-opacity=".5" stroke-width="2">
+<line x1="900" y1="174" x2="1060" y2="174"/><line x1="930" y1="186" x2="1030" y2="186"/><line x1="955" y1="198" x2="1005" y2="198"/></g>
+<path d="M0 160 L120 128 L210 140 L300 108 L380 132 L440 160 Z" fill="#121518"/>
+</svg>
+</section>
 
-<section class="carta"><div class="wrap">
-<span class="eyebrow">The menu</span><h2>To go with the sunset</h2>
-<div class="grid"><div class="grupo reveal"><ul><li><div class="plato"><span class="pn">Barraquito</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>The classic Canarian layered coffee.</p></li><li><div class="plato"><span class="pn">Sangria &amp; cocktails</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Made for watching the sunset.</p></li><li><div class="plato"><span class="pn">German beer</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>A taste of home for German visitors.</p></li><li><div class="plato"><span class="pn">Tapas, sandwiches &amp; cakes</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>A bite to eat with the best view in town.</p></li></ul></div></div>
-</div></section>
+<section class="menu" id="carta">
+ <div class="wrap">
+  <p class="kicker rv"><b>03</b>The menu</p>
+  <h2 class="rv">To go with<br><em>the sunset</em></h2>
+  <ol class="mlist"><li class="rv"><span class="n">01</span><h3>Barraquito</h3><p>The Canarian coffee classic: condensed milk, liqueur, foam and cinnamon, in layers.</p></li><li class="rv"><span class="n">02</span><h3>Sangria</h3><p>What our guests order most as the sun goes down.</p></li><li class="rv"><span class="n">03</span><h3>Cocktails</h3><p>Mojitos and classics, made for watching the sunset.</p></li><li class="rv"><span class="n">04</span><h3>German beer</h3><p>Draught and bottled — a taste of home for our German guests.</p></li><li class="rv"><span class="n">05</span><h3>Bocadillos & tapas</h3><p>Something to nibble, unhurried, with the best view in town.</p></li><li class="rv"><span class="n">06</span><h3>Homemade cakes</h3><p>With your afternoon coffee, or as an excuse to stay a little longer.</p></li></ol>
+  <p class="price rv">Around €10–20 per person, according to our guests. <small>— Drew D., Google</small></p>
+ </div>
+</section>
 
+<section class="rev" id="opiniones">
+ <div class="wrap">
+  <p class="kicker"><b>04</b>Reviews</p>
+  <h2 class="rv">What people say<br><em>once they're up here</em></h2>
+  <div class="score rv">
+   <span class="big">4,6</span>
+   <div class="meta"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><p><strong>out of 5 on Google</strong> · 1,821 reviews</p><p>TripAdvisor · 4.5 out of 5 · 285 reviews</p></div>
+  </div>
+  <div class="track" tabindex="0" aria-label="Reviews"><figure class="q rv"><div><span class="n">01 / 06</span><blockquote lang="en">“A super cosy place — the kind where you sit down and don't want to get up again.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>Birgit R.</strong><span>Google · Apr 2026</span><span class="tr">(translated)</span></figcaption></figure><figure class="q rv"><div><span class="n">02 / 06</span><blockquote lang="en">“Magnificent views, friendly staff, attractive prices and simply delicious food.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>Joana</strong><span>Google · Apr 2026</span><span class="tr">(translated)</span></figcaption></figure><figure class="q rv"><div><span class="n">03 / 06</span><blockquote lang="en">“The bar serves one of the best sangrias I've ever had.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>JC T.</strong><span>Google · Mar 2026</span><span class="tr">(translated)</span></figcaption></figure><figure class="q rv"><div><span class="n">04 / 06</span><blockquote lang="en">“I ordered the barraquitos and they were absolutely fantastic.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>Gabriele J.</strong><span>Google · Mar 2026</span><span class="tr">(translated)</span></figcaption></figure><figure class="q rv"><div><span class="n">05 / 06</span><blockquote lang="en">“The cocktails are delicious too.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>Simon G.</strong><span>Google · Mar 2026</span><span class="tr">(translated)</span></figcaption></figure><figure class="q rv"><div><span class="n">06 / 06</span><blockquote lang="en">“Alberto's staff are always friendly and we enjoy having a drink or a meal there.”</blockquote></div><figcaption><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><strong>Rebeca H.</strong><span>Google · Mar 2026</span><span class="tr">(translated)</span></figcaption></figure></div>
+  <div class="rev-foot"><span>Real reviews published on Google (collected by Gastroranking).</span><span class="swipe" aria-hidden="true">Swipe →</span></div>
+ </div>
+</section>
 
+<section class="visit" id="llegar">
+ <div class="wrap">
+  <p class="kicker"><b>05</b>Directions</p>
+  <h2 class="rv">Up the hill,<br><em>by Parque Taoro</em></h2>
+  <div class="visit-grid">
+   <div class="rv">
+    <p class="addr">Calle Malpaís 5<br>38400 Puerto de la Cruz, Tenerife</p>
+    <p class="walk">About 15 minutes on foot from the centre — uphill, with steps. Everyone who makes the climb says it's worth it; or come by taxi or car.</p>
+    <div class="ctas"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Alberto%27s%20Bar%2C%20Calle%20Malpa%C3%ADs%205%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Open in Google Maps</a></div>
+    <p class="coords">28°24′N · 16°33′W · PARQUE TAORO</p>
+   </div>
+   <div class="hours rv">
+    <h3>Opening hours</h3>
+    <dl><div><dt>Wednesday to Monday</dt><dd>12:00 – 23:00</dd></div><div><dt>Tuesday</dt><dd>Closed</dd></div></dl>
+    <p>Hours are indicative. Call us to confirm or to book a sunset table.</p>
+    <a class="phone" href="tel:+34922386061">922 38 60 61</a>
+    <p>We accept Visa, Mastercard, American Express and Diners.</p>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
 
-<section class="opiniones"><div class="wrap"><div class="bigrate reveal"><b>4.6</b><span>★★★★★</span><small>average rating · 1.800+ Google reviews</small></div><div><span class="eyebrow">What people say</span><div class="reviews" style="margin-top:22px"><figure class="review reveal"><blockquote>A great bar with beautiful views and very friendly staff. (translated)</blockquote><figcaption>★★★★★ · Reseña en Google</figcaption></figure><figure class="review reveal"><blockquote>Magnificent views, friendly staff, good prices and simply delicious food. (translated)</blockquote><figcaption>★★★★★ · Reseña en Google</figcaption></figure></div></div></div></section>
+<footer><div class="wrap"><span>Alberto's Bar · Calle Malpaís 5 · Puerto de la Cruz</span><span>ES · EN · DE</span></div></footer>
 
-<section class="visita"><div class="wrap">
-<span class="eyebrow">Come and see us</span><h2>Come and see us</h2>
-<div class="cols wrap" style="width:100%">
-<div><h3>Opening hours</h3><p class="muted">Call or message us to check today's opening hours.</p></div>
-<div><h3>Address</h3><p class="dir">Calle Malpaís 5, 38400 Puerto de la Cruz, Tenerife</p>
-<div class="acciones"><a class="btn main" href="https://www.google.com/maps/search/?api=1&query=Alberto%27s%20Bar%2C%20Calle%20Malpa%C3%ADs%205%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Open in Google Maps</a>
-<a class="btn glass" href="tel:+34922386061">+34 922 38 60 61</a></div></div>
-</div></div></section>
-
-<footer><div class="wrap"><span>© Alberto&#x27;s Bar</span><span>Calle Malpaís 5, 38400 Puerto de la Cruz, Tenerife</span></div></footer>
-
-
-<div class="demo">Design proposal for this business · Not its official website</div>
+<div class="bars">
+ <nav class="actions" aria-label="Call">
+  <a href="tel:+34922386061"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Alberto%27s%20Bar%2C%20Calle%20Malpa%C3%ADs%205%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
+ </nav>
+ <p class="demo" style="margin:0">Design proposal for this business · Not its official website</p>
+</div>
 <script>
+document.documentElement.classList.add('js');
 (function(){
-  document.documentElement.classList.add("js");
-  var top=document.getElementById("top");
-  var onScroll=function(){top.classList.toggle("solid",scrollY>60)}; onScroll(); addEventListener("scroll",onScroll,{passive:true});
-  if("IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove("oculto");io.unobserve(x.target)}})},{rootMargin:"0px 0px -8% 0px"});
-    document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top>innerHeight){el.classList.add("oculto");io.observe(el)}});
-  }
-  var h={"0": [], "1": [], "2": [], "3": [], "4": [], "5": [], "6": []};
-  var ahora=new Date(new Date().toLocaleString("en-US",{timeZone:"Atlantic/Canary"}));
-  var dia=(ahora.getDay()+6)%7, min=ahora.getHours()*60+ahora.getMinutes();
-  var fila=document.querySelector('tr[data-dia="'+dia+'"]'); if(fila) fila.className="hoy";
-  var el=document.getElementById("estado"); if(!el) return;
-  var abierto=(h[dia]||[]).some(function(r){
-    var p=r.replace(/\s/g,"").split(/[-–]/); if(p.length<2) return false;
-    var a=p[0].split(":"), b=p[1].split(":"), ini=+a[0]*60+(+a[1]||0), fin=+b[0]*60+(+b[1]||0);
-    if(fin<=ini) fin+=1440; return (min>=ini&&min<fin)||(min+1440>=ini&&min+1440<fin);
-  });
-  el.textContent=abierto?"Open now":"Closed now"; el.className="estado "+(abierto?"si":"no");
+ var io='IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var els=document.querySelectorAll('.rv');
+ if(!io){els.forEach(function(e){e.classList.add('in')});}
+ else{var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){o.observe(e)});}
+ // Sunset for Puerto de la Cruz (28.41N, 16.55W), sunrise equation
+ try{
+  var r=Math.PI/180,lat=28.41,lon=-16.55,now=new Date();
+  var jd=Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),12)/864e5+2440587.5;
+  var n=Math.ceil(jd-2451545+0.0008-0.5);
+  var Js=n-lon/360,M=(357.5291+0.98560028*Js)%360;
+  var C=1.9148*Math.sin(M*r)+0.02*Math.sin(2*M*r)+0.0003*Math.sin(3*M*r);
+  var L=(M+C+180+102.9372)%360;
+  var Jt=2451545+Js+0.0053*Math.sin(M*r)-0.0069*Math.sin(2*L*r);
+  var d=Math.asin(Math.sin(L*r)*Math.sin(23.4397*r));
+  var w=Math.acos((Math.sin(-0.833*r)-Math.sin(lat*r)*Math.sin(d))/(Math.cos(lat*r)*Math.cos(d)))/r;
+  var set=new Date((Jt+w/360-2440587.5)*864e5);
+  var loc=document.documentElement.dataset.loc;
+  var f=function(t){return t.toLocaleTimeString(loc,{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Atlantic/Canary'})};
+  var el=document.getElementById('sunset');
+  el.textContent=f(set);el.classList.remove('nojs');
+  document.getElementById('arrive').textContent=f(new Date(set.getTime()-40*6e4));
+  document.getElementById('sundate').textContent=now.toLocaleDateString(loc,{weekday:'long',day:'numeric',month:'long',timeZone:'Atlantic/Canary'});
+  document.getElementById('suntip').hidden=false;
+ }catch(e){}
 })();
 </script>
 </body>
