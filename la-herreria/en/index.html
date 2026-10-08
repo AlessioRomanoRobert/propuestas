@@ -2,99 +2,206 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>La Herrería · Restaurant en Puerto de la Cruz</title>
-<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La Herrería · Restaurant · Puerto de la Cruz</title>
 <meta name="description" content="One of the best-loved restaurants in Puerto de la Cruz&#x27;s old town.">
-
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#17120f">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "La Herrería", "telephone": "+34 922 38 65 01", "address": "Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.6, "reviewCount": "1.700+"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "La Herrería", "telephone": "+34 922 38 65 01", "address": "Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife"}</script>
 <style>
-:root{--c:#7c2d12;--ink:#14161a;--muted:#5b6270;--bg:#faf8f5;--card:#fff;--line:#ebe6df}
-*{box-sizing:border-box;margin:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:600}
+:root{--bg:#17120f;--surface:#221b16;--ink:#f3ebe0;--muted:#b8a894;--accent:#e0a84a;
+--accent2:#8c2f2a;--line:rgba(243,235,224,.14);--hero-base:#17120f;--display:'DM Serif Display',Georgia,serif;--body:Manrope,system-ui,sans-serif;
+color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 1.0625rem/1.65 var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-nav{position:absolute;inset:0 0 auto;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;color:#fff}
-nav .brand{font-family:Fraunces,serif;font-size:1.15rem;text-decoration:none}
-nav .lang a{text-decoration:none;margin-left:10px;font-size:.85rem;opacity:.75}
-nav .lang a[aria-current]{opacity:1;border-bottom:2px solid #fff}
-.hero{min-height:min(88vh,760px);display:flex;align-items:flex-end;background:linear-gradient(135deg,#7c2d12,#0b1220);color:#fff;padding:120px 0 64px}
-.hero .wrap{width:100%}
-.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);max-width:14ch}
-.hero p.lema{font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:46ch;margin:14px 0 22px;opacity:.92}
-.rating{font-size:.95rem;margin-bottom:22px} .stars{color:#f5b301;letter-spacing:2px}
-.btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem}
-.btn.wa{background:#25d366;color:#05301a} .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
-section{padding:72px 0}
-section h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:24px}
-.about p{font-size:1.1rem;max-width:62ch;color:#2b2f36}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
-.card-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.card h3{font-size:1.15rem} .card p{color:var(--muted);margin-top:6px;font-size:.95rem}
-.precio{color:var(--c);font-weight:600;white-space:nowrap}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
-.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
-.reviews{background:#fff;border-block:1px solid var(--line)}
-.review{background:var(--bg);border-radius:16px;padding:22px}
-.review blockquote{margin:8px 0;font-size:1.02rem} .review figcaption{color:var(--muted);font-size:.9rem}
-.info{display:grid;grid-template-columns:1fr 1.3fr;gap:28px}
-table{width:100%;border-collapse:collapse} th,td{text-align:left;padding:9px 0;border-bottom:1px solid var(--line);font-weight:400}
-th{color:var(--muted)} tr.hoy th,tr.hoy td{font-weight:600;color:var(--ink)}
-.estado{display:inline-block;margin-bottom:12px;padding:4px 12px;border-radius:999px;font-size:.85rem;font-weight:600}
-.estado.si{background:#dcfce7;color:#166534} .estado.no{background:#fee2e2;color:#991b1b}
-iframe{display:block;width:100%;height:340px;border:0;border-radius:16px}
-.dir{margin-top:14px;color:var(--muted)}
-footer{background:#0b1220;color:#cbd5e1;padding:36px 0;font-size:.9rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px} footer a{margin-right:14px}
-.fab{position:fixed;right:18px;bottom:18px;z-index:10;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;text-wrap:balance;letter-spacing:-.01em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{font:600 .78rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+
+/* barra superior */
+.top{position:fixed;inset:0 0 auto;z-index:30;padding:calc(14px + env(safe-area-inset-top,0px)) 0 14px;transition:background .3s,backdrop-filter .3s}
+.top.solid{background:color-mix(in oklab,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;color:#fff}
+.top.solid .brand{color:var(--ink)}
+.top nav{display:flex;align-items:center;gap:18px}
+.langs{display:flex;gap:2px;background:rgba(0,0,0,.25);border-radius:999px;padding:3px}
+.langs a{font:600 .72rem/1 var(--body);letter-spacing:.08em;text-decoration:none;color:#fff;padding:7px 10px;border-radius:999px;opacity:.75}
+.langs a[aria-current]{background:#fff;color:#111;opacity:1}
+.top .cta{font:600 .9rem var(--body);text-decoration:none;background:var(--accent);color:#111;padding:10px 18px;border-radius:999px}
+
+/* portada */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;background:radial-gradient(120% 90% at 85% 10%,color-mix(in oklab,var(--accent) 55%,transparent),transparent 60%),radial-gradient(90% 80% at 0% 100%,color-mix(in oklab,var(--accent2) 70%,transparent),transparent 65%),var(--hero-base);overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.72) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .ghost{position:absolute;right:-.06em;top:50%;transform:translateY(-62%);font:600 clamp(14rem,42vw,40rem)/.8 var(--display);color:rgba(255,255,255,.07);z-index:-1;pointer-events:none;user-select:none;}
+.hero .wrap{padding-block:140px 72px;display:grid;gap:22px}
+.hero .eyebrow{color:var(--accent)}
+.hero h1{font-size:clamp(3.2rem,11vw,8.5rem);max-width:12ch}
+.hero .lema{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:40ch;opacity:.92}
+.hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 1rem var(--body);text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--accent);color:#111}
+.btn.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.rating{display:flex;align-items:baseline;gap:8px}
+.rating b{font:600 1.6rem/1 var(--display)} .rating span{color:#ffc94d;letter-spacing:2px} .rating small{opacity:.8}
+.estado{display:inline-flex;align-items:center;gap:8px;font:600 .85rem var(--body);padding:7px 14px;border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+.estado::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.estado.si{color:#7ee2a0} .estado.no{color:#ff9d8a}
+
+/* cinta de especialidades */
+.cinta{background:var(--accent);color:#111;overflow:hidden;white-space:nowrap;padding:16px 0;font:600 clamp(1.1rem,2.4vw,1.5rem)/1 var(--display)}
+.cinta div{display:inline-flex;gap:28px;animation:cinta 40s linear infinite;padding-left:28px}
+.cinta i{font-style:normal;opacity:.5}
+@keyframes cinta{to{transform:translateX(-50%)}}
+
+section{padding:clamp(72px,11vw,140px) 0}
+section h2{font-size:clamp(2.4rem,6vw,4.4rem);margin:14px 0 36px}
+
+/* la casa */
+.casa .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,90px);align-items:center}
+.casa p.texto{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.6;max-width:34ch}
+.casa p.texto::first-letter{font:600 4.2em/.8 var(--display);float:left;margin:.08em .1em 0 0;color:var(--accent)}
+.casa-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px 160px 6px 6px}
+.monograma{display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,color-mix(in oklab,var(--accent) 60%,var(--surface)),var(--accent2));}
+.monograma span{font:600 clamp(9rem,22vw,16rem)/1 var(--display);color:rgba(255,255,255,.88)}
+
+/* carta */
+.carta{background:var(--surface);border-block:1px solid var(--line)}
+.carta .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px 72px}
+.grupo h3{font-size:1.6rem;color:var(--accent);margin-bottom:10px}
+.grupo ul{list-style:none}
+.grupo li{padding:16px 0;border-bottom:1px solid var(--line)}
+.plato{display:flex;align-items:baseline;gap:10px}
+.pn{font:600 clamp(1.2rem,2vw,1.45rem)/1.25 var(--display)}
+.dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.pp{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.grupo li p{color:var(--muted);margin-top:4px;font-size:.98rem}
+
+/* galería */
+.gal{columns:3 260px;column-gap:14px}
+.gal img{width:100%;margin-bottom:14px;border-radius:6px;break-inside:avoid}
+
+/* reseñas */
+.opiniones .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px);align-items:start}
+.bigrate b{display:block;font:600 clamp(6rem,14vw,10rem)/.85 var(--display);color:var(--accent)}
+.bigrate span{display:block;color:#f5b301;font-size:1.6rem;letter-spacing:4px;margin:14px 0 6px}
+.bigrate small{color:var(--muted)}
+.reviews{display:grid;gap:22px}
+.review{padding:28px 30px;background:var(--surface);border:1px solid var(--line);border-radius:4px 28px 28px 28px}
+.review blockquote{font:500 clamp(1.25rem,2.3vw,1.6rem)/1.35 var(--display)}
+.review blockquote::before{content:"“";color:var(--accent)} .review blockquote::after{content:"”";color:var(--accent)}
+.review figcaption{margin-top:12px;color:var(--muted);font-size:.92rem}
+
+/* visita */
+.visita{background:#8c2f2a;color:#fff}
+.visita .eyebrow{color:color-mix(in oklab,var(--accent) 80%,#fff)}
+.visita .wrap.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px)}
+.visita h3{font-size:1.5rem;margin-bottom:14px}
+.horario{width:100%;border-collapse:collapse}
+.horario th,.horario td{text-align:left;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18);font-weight:400}
+.horario td{text-align:right;font-variant-numeric:tabular-nums}
+.horario tr.hoy{font-weight:700} .horario tr.hoy th::after{content:" ●";color:var(--accent)}
+.visita .muted{color:rgba(255,255,255,.75)}
+.dir{font:600 clamp(1.3rem,2.4vw,1.8rem)/1.3 var(--display);margin-bottom:22px}
+.visita .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.visita .btn.glass{border-color:rgba(255,255,255,.4)}
+
+footer{padding:36px 0 calc(110px + env(safe-area-inset-bottom,0px));font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.fab{position:fixed;right:18px;bottom:calc(58px + env(safe-area-inset-bottom,0px));z-index:25;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 .fab svg{width:30px;height:30px;fill:#fff}
-@media (max-width:760px){.info{grid-template-columns:1fr} section{padding:56px 0}}
+.demo{position:fixed;inset:auto 0 0;z-index:40;background:#111;color:#fff;text-align:center;font:500 12.5px/1.4 system-ui,sans-serif;padding:9px 14px calc(9px + env(safe-area-inset-bottom,0px))}
+
+.reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.oculto{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){.cinta div{animation:none} .js .reveal.oculto{opacity:1;transform:none}}
+@media (max-width:820px){
+  .casa .wrap,.opiniones .wrap,.visita .wrap.cols{grid-template-columns:1fr}
+  .top .cta{display:none}
+  .casa-img{aspect-ratio:4/3;border-radius:6px 90px 6px 6px}
+}
 </style>
 </head>
 <body>
-<div style="position:fixed;inset:auto 0 0;z-index:20;background:#111827;color:#fff;text-align:center;font:500 13px/1.4 Inter,sans-serif;padding:8px 70px 8px 12px">Propuesta de diseño · no es la web oficial del negocio · Design proposal, not the official website</div>
-<nav><a class="brand" href="#">La Herrería</a><div class="lang"><a href="../">ES</a> <a href="../en/" aria-current=page>EN</a> <a href="../de/">DE</a></div></nav>
-<header class="hero"><div class="wrap">
+<header class="top" id="top"><div class="wrap">
+<a class="brand" href="#">La Herrería</a>
+<nav><div class="langs"><a href="../">ES</a><a href="../en/" aria-current=page>EN</a><a href="../de/">DE</a></div><a class="cta" href="tel:+34922386501">Book a table</a></nav>
+</div></header>
+
+<section class="hero" style="padding:0">
+<div class="ghost" aria-hidden="true">L</div>
+<div class="wrap">
+<span class="eyebrow">Old town · Puerto de la Cruz</span>
 <h1>La Herrería</h1>
 <p class="lema">One of the best-loved restaurants in Puerto de la Cruz&#x27;s old town.</p>
-<p class="rating"><span class="stars">★★★★★</span> 4.6 · 1.700+ reviews</p>
-<div class="btns">
+<div class="row">
+<a class="btn main" href="tel:+34922386501"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call</a>
 
-<a class="btn ghost" href="tel:+34922386501">Call</a>
-<a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20La%20Herrer%C3%ADa%2C%20Calle%20Colog%C3%A1n%207%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Directions</a>
-</div></div></header>
+<a class="btn glass" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20La%20Herrer%C3%ADa%2C%20Calle%20Colog%C3%A1n%207%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Directions</a>
+</div>
+<div class="row"><div class="rating"><b>4.6</b><span>★★★★★</span><small>1.700+ Google reviews</small></div></div>
+</div>
+</section>
 
-<section class="about"><div class="wrap"><h2>About us</h2><p>On Calle Cologán, in the heart of the old town, La Herrería is where locals send their friends. Grilled meats, our house fillet, paella, rabbit, bonito, prawns and homemade desserts. Booking recommended.</p></div></section>
-<section><div class="wrap"><h2>What we offer</h2><div class="grid"><div class="card"><div class="card-top"><h3>House fillet steak</h3></div><p>Our signature dish, &quot;La Herrerida&quot;.</p></div><div class="card"><div class="card-top"><h3>Grilled meats</h3></div><p>Entrecôte, roasts and grilled cheese.</p></div><div class="card"><div class="card-top"><h3>Paella</h3></div><p>Made to share.</p></div><div class="card"><div class="card-top"><h3>Rabbit, bonito &amp; prawns</h3></div><p>Flavours of the islands.</p></div></div></div></section>
+<div class="cinta" aria-hidden="true"><div><span>House fillet steak</span><i>✦</i><span>Grilled meats</span><i>✦</i><span>Paella</span><i>✦</i><span>Rabbit, bonito &amp; prawns</span><i>✦</i><span>House fillet steak</span><i>✦</i><span>Grilled meats</span><i>✦</i><span>Paella</span><i>✦</i><span>Rabbit, bonito &amp; prawns</span><i>✦</i></div></div>
 
-<section class="reviews"><div class="wrap"><h2>What our customers say</h2><div class="grid"><figure class="review"><div class="stars">★★★★★</div><blockquote>“The best food I&#x27;ve had in Tenerife so far. (translated)”</blockquote><figcaption>— Reseña en Google</figcaption></figure><figure class="review"><div class="stars">★★★★★</div><blockquote>“An excellent restaurant with attentive service and truly delicious food. (translated)”</blockquote><figcaption>— Reseña en Google</figcaption></figure></div></div></section>
-
-<section><div class="wrap info">
-<div><h2>Opening hours</h2><p class="about">Please call or message us for today's opening hours.</p></div>
-<div><h2>Find us</h2>
-<iframe loading="lazy" title="Map" src="https://maps.google.com/maps?q=Restaurante%20La%20Herrer%C3%ADa%2C%20Calle%20Colog%C3%A1n%207%2C%20Puerto%20de%20la%20Cruz&output=embed"></iframe>
-<p class="dir">Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife</p></div>
+<section class="casa"><div class="wrap">
+<div class="reveal"><span class="eyebrow">The house</span><h2>Grill, paella and long lunches</h2>
+<p class="texto">On Calle Cologán, in the heart of the old town, La Herrería is where locals send their friends. Grilled meats, our house fillet, paella, rabbit, bonito, prawns and homemade desserts. Booking recommended.</p></div>
+<div class="casa-img monograma reveal" aria-hidden="true"><span>L</span></div>
 </div></section>
 
-<footer><div class="wrap"><span>© La Herrería · Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife</span><span></span></div></footer>
+<section class="carta"><div class="wrap">
+<span class="eyebrow">The menu</span><h2>From the grill to your table</h2>
+<div class="grid"><div class="grupo reveal"><ul><li><div class="plato"><span class="pn">House fillet steak</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Our signature dish, &quot;La Herrerida&quot;.</p></li><li><div class="plato"><span class="pn">Grilled meats</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Entrecôte, roasts and grilled cheese.</p></li><li><div class="plato"><span class="pn">Paella</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Made to share.</p></li><li><div class="plato"><span class="pn">Rabbit, bonito &amp; prawns</span><span class="dots" aria-hidden="true"></span><span class="pp"></span></div><p>Flavours of the islands.</p></li></ul></div></div>
+</div></section>
 
+
+
+<section class="opiniones"><div class="wrap"><div class="bigrate reveal"><b>4.6</b><span>★★★★★</span><small>average rating · 1.700+ Google reviews</small></div><div><span class="eyebrow">What people say</span><div class="reviews" style="margin-top:22px"><figure class="review reveal"><blockquote>The best food I&#x27;ve had in Tenerife so far. (translated)</blockquote><figcaption>★★★★★ · Reseña en Google</figcaption></figure><figure class="review reveal"><blockquote>An excellent restaurant with attentive service and truly delicious food. (translated)</blockquote><figcaption>★★★★★ · Reseña en Google</figcaption></figure></div></div></div></section>
+
+<section class="visita"><div class="wrap">
+<span class="eyebrow">Come and see us</span><h2>Come and see us</h2>
+<div class="cols wrap" style="width:100%">
+<div><h3>Opening hours</h3><p class="muted">Call or message us to check today's opening hours.</p></div>
+<div><h3>Address</h3><p class="dir">Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife</p>
+<div class="acciones"><a class="btn main" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20La%20Herrer%C3%ADa%2C%20Calle%20Colog%C3%A1n%207%2C%20Puerto%20de%20la%20Cruz" target="_blank" rel="noopener">Open in Google Maps</a>
+<a class="btn glass" href="tel:+34922386501">+34 922 38 65 01</a></div></div>
+</div></div></section>
+
+<footer><div class="wrap"><span>© La Herrería</span><span>Calle Cologán 7, 38400 Puerto de la Cruz, Tenerife</span></div></footer>
+
+
+<div class="demo">Design proposal for this business · Not its official website</div>
 <script>
 (function(){
+  document.documentElement.classList.add("js");
+  var top=document.getElementById("top");
+  var onScroll=function(){top.classList.toggle("solid",scrollY>60)}; onScroll(); addEventListener("scroll",onScroll,{passive:true});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.remove("oculto");io.unobserve(x.target)}})},{rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top>innerHeight){el.classList.add("oculto");io.observe(el)}});
+  }
   var h={"0": [], "1": [], "2": [], "3": [], "4": [], "5": [], "6": []};
   var ahora=new Date(new Date().toLocaleString("en-US",{timeZone:"Atlantic/Canary"}));
   var dia=(ahora.getDay()+6)%7, min=ahora.getHours()*60+ahora.getMinutes();
   var fila=document.querySelector('tr[data-dia="'+dia+'"]'); if(fila) fila.className="hoy";
+  var el=document.getElementById("estado"); if(!el) return;
   var abierto=(h[dia]||[]).some(function(r){
     var p=r.replace(/\s/g,"").split(/[-–]/); if(p.length<2) return false;
     var a=p[0].split(":"), b=p[1].split(":"), ini=+a[0]*60+(+a[1]||0), fin=+b[0]*60+(+b[1]||0);
     if(fin<=ini) fin+=1440; return (min>=ini&&min<fin)||(min+1440>=ini&&min+1440<fin);
   });
-  var el=document.getElementById("estado"); if(!el) return;
   el.textContent=abierto?"Open now":"Closed now"; el.className="estado "+(abierto?"si":"no");
 })();
 </script>
