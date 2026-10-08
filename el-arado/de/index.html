@@ -37,10 +37,10 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;text-wrap:b
 .top .cta{font:600 .9rem var(--body);text-decoration:none;background:var(--accent);color:#111;padding:10px 18px;border-radius:999px}
 
 /* portada */
-.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;background:radial-gradient(120% 90% at 85% 10%,color-mix(in oklab,var(--accent) 55%,transparent),transparent 60%),radial-gradient(90% 80% at 0% 100%,color-mix(in oklab,var(--accent2) 70%,transparent),transparent 65%),var(--hero-base);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.72) 100%)}
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;background:url('../img/el-arado-1.jpg') center/cover;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.1) 30%,rgba(0,0,0,.78) 100%),linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.25) 55%,rgba(0,0,0,0) 80%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero .ghost{position:absolute;right:-.06em;top:50%;transform:translateY(-62%);font:600 clamp(14rem,42vw,40rem)/.8 var(--display);color:rgba(255,255,255,.07);z-index:-1;pointer-events:none;user-select:none;}
+.hero .ghost{position:absolute;right:-.06em;top:50%;transform:translateY(-62%);font:600 clamp(14rem,42vw,40rem)/.8 var(--display);color:rgba(255,255,255,.07);z-index:-1;pointer-events:none;user-select:none;display:none;}
 .hero .wrap{padding-block:140px 72px;display:grid;gap:22px}
 .hero .eyebrow{color:var(--accent)}
 .hero h1{font-size:clamp(3.2rem,11vw,8.5rem);max-width:12ch}
